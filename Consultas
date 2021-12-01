@@ -1,0 +1,84 @@
+select 
+year(certificado.FechaCertificado) as Año,
+Personal.NombresPersonal, 
+Tramite.TipoTramite,
+count(*) as Cantidad
+from certificado 
+join personal on 
+certificado.IdPersonal=personal.IdPersonal
+join tramite on 
+certificado.IdTramite=tramite.IdTramite
+where year(certificado.FechaCertificado)='2021'
+GROUP BY NombresPersonal;
+
+select 
+year(certificado.FechaCertificado) as Año,
+Personal.NombresPersonal, 
+Tramite.TipoTramite,
+count(*) as Cantidad
+from certificado 
+join personal on 
+certificado.IdPersonal=personal.IdPersonal
+join tramite on 
+certificado.IdTramite=tramite.IdTramite
+where year(certificado.FechaCertificado)='2020'
+GROUP BY NombresPersonal;
+#----------------------------------------------------
+
+select
+year(pago.Fecha) as Año,
+Tramite.TipoTramite,
+count(*) as Cantidad,
+sum(ValorPago) as TotalPago
+from pago 
+join tramite on
+pago.IdTramite=tramite.IdTramite
+where year(pago.Fecha)='2021';
+
+select
+year(pago.Fecha) as Año,
+Tramite.TipoTramite,
+count(*) as Cantidad,
+sum(ValorPago) as TotalPago
+from pago 
+join tramite on
+pago.IdTramite=tramite.IdTramite
+where year(pago.Fecha)='2020'
+#--------------------------------------------------------
+
+select count(*) as TotaLDeBovedas,
+TipoDeEstructura from Boveda WHERE TipoDeEstructura='Cruces';
+
+select count(*) as TotaLDeBovedas,
+TipoDeEstructura from Boveda WHERE TipoDeEstructura='Lapida Grabada';
+
+select count(*) as TotaLDeBovedas,
+TipoDeEstructura from Boveda WHERE TipoDeEstructura='Nicho';
+
+select count(*) as TotaLDeBovedas,
+TipoDeEstructura from Boveda WHERE TipoDeEstructura='Bovedas Individuales';
+
+select count(*) as TotaLDeBovedas,
+TipoDeEstructura from Boveda WHERE TipoDeEstructura='Bovedas Familiares';
+
+select count(*) as TotaLDeBovedas,
+TipoDeEstructura from Boveda WHERE TipoDeEstructura='Bovedas Casas'
+#-------------------------------------------------------------------------------
+
+select
+year(incidente.FechaIncidente) as Año,
+incidente.TipoIncidente,
+count(*) as CantidadDeIncidentes
+from incidente
+where year(incidente.FechaIncidente)='2020' 
+GROUP BY TipoIncidente;
+
+
+select
+year(incidente.FechaIncidente) as Año,
+incidente.TipoIncidente,
+count(*) as CantidadDeIncidentes
+from incidente
+where year(incidente.FechaIncidente)='2021' 
+GROUP BY TipoIncidente;
+
