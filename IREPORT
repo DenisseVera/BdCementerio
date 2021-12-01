@@ -1,0 +1,65 @@
+#CODIGO MYSQL
+select case 
+when CausaDeMuerte='Covid' then 'Covid'
+when CausaDeMuerte='Cancer' then 'Cancer'
+when CausaDeMuerte='Trauma Encefalico' then 'Trauma Encefalico'
+ end as CausaMuerte,
+count(CausaDeMuerte) as TotalProAño
+from fallecimiento
+group by CausaDeMuerte
+
+#CÓDIGO IRREPORT 
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MuertesCaus" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a74fcde6-6f23-4a6a-ac3a-f90ced65e213">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select case
+when CausaDeMuerte='Covid' then 'Covid'
+when CausaDeMuerte='Cancer' then 'Cancer'
+when CausaDeMuerte='Trauma Encefalico' then 'Trauma Encefalico'
+ end as CausaMuerte,
+count(CausaDeMuerte) as TotalProAño
+from fallecimiento
+group by CausaDeMuerte]]>
+	</queryString>
+	<field name="CausaMuerte" class="java.lang.String"/>
+	<field name="TotalProAño" class="java.lang.Long"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="146" splitType="Stretch">
+			<staticText>
+				<reportElement x="57" y="25" width="223" height="51" forecolor="#6666FF" uuid="8e779bdb-1459-4bf9-8e73-a8dd7cbb78e6"/>
+				<textElement>
+					<font size="38" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cementerio Facci]]></text>
+			</staticText>
+			<image>
+				<reportElement x="321" y="11" width="202" height="116" uuid="bfe85a7e-e364-44c7-9659-38d92866447d"/>
+				<imageExpression><![CDATA["C:\\Users\\Usuario\\Desktop\\alex\\kleiton\\cementerio.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<detail>
+		<band height="265" splitType="Stretch">
+			<barChart>
+				<chart>
+					<reportElement x="27" y="19" width="452" height="220" uuid="215dc78a-f452-4fb2-a91e-46b359f5c572"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["Dummy Series"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{CausaMuerte}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{TotalProAño}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot/>
+
