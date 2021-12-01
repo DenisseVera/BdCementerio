@@ -1,0 +1,668 @@
+Insert into Propietario (
+CedulaPropietario,
+NombresPropietario,
+ApellidosPropietario,
+FechaDeNacimiento,
+DireccionPropietario,
+Telefono1,
+Telefono2) values (
+1315293082,
+'Denisse Yelitza',
+'Vera Sanchez',
+'1998-12-11',
+'Barrio Santa Martha',
+0983358135,
+0985321456);
+
+Insert into Propietario (
+CedulaPropietario,
+NombresPropietario,
+ApellidosPropietario,
+FechaDeNacimiento,
+DireccionPropietario,
+Telefono1,
+Telefono2) values (
+1315293082,
+'Angie Nicole',
+'Vera Sanchez',
+'2000-01-19',
+'Barrio La Epoca Calle G',
+0983596123,
+0985896457);
+
+Insert into Propietario (
+CedulaPropietario,
+NombresPropietario,
+ApellidosPropietario,
+FechaDeNacimiento,
+DireccionPropietario,
+Telefono1) values (
+1318964082,
+'Gema Cecilia',
+'Mero Castro',
+'1996-05-25',
+'Barrio Las Acacias',
+0983589633);
+#-------------------------------------------
+
+Insert into Provincia (
+NombresProvincia) values (
+'MANABI');
+
+Insert into Provincia (
+NombresProvincia) values (
+'Guayas');
+
+#-------------------------------------------
+
+Insert into PersonalExterno(
+CedulaPersonalExterno,
+NombresPersonalExterno,
+ApellidosPersonalExterno,
+CargoPersonalExterno) values (
+1315293052,
+'Maria Carlotta',
+'Moreira Santana',
+'Secretaria GAD Manta ');
+
+Insert into PersonalExterno(
+CedulaPersonalExterno,
+NombresPersonalExterno,
+ApellidosPersonalExterno,
+CargoPersonalExterno) values (
+1319633054,
+'Rosa Carmen',
+'Reyes Pico',
+'Secretaria De Talentos Humanos GAD Manta');
+#----------------------------------------
+
+Insert into Personal(
+CedulaPersonal,
+NombresPersonal,
+ApellidosPersonal,
+TipoPersonal,
+DireccionPersonal,
+TelefonoPersonal) values (
+1315183811,
+'Roberth Wilfrido',
+'Moreira Centeno',
+'Administrativo',
+'Calle 12 av 37',
+0935697644);
+
+Insert into Personal(
+CedulaPersonal,
+NombresPersonal,
+ApellidosPersonal,
+TipoPersonal,
+DireccionPersonal,
+TelefonoPersonal) values (
+1315896235,
+'Jonathan Jordan',
+'Bailon Menendez',
+'Operativo',
+'Cdla. Universitaria calle U7',
+0969482637);
+
+Insert into Personal(
+CedulaPersonal,
+NombresPersonal,
+ApellidosPersonal,
+TipoPersonal,
+DireccionPersonal,
+TelefonoPersonal) values (
+1315189426,
+'Carlos Rodrigo',
+'Cortez Macias',
+'Administrativo',
+'Barrio Las Cumbres',
+0935895414);
+
+Insert into Personal(
+CedulaPersonal,
+NombresPersonal,
+ApellidosPersonal,
+TipoPersonal,
+DireccionPersonal,
+TelefonoPersonal) values (
+1309563210,
+'Mauro Jesus',
+'Alvia Flores',
+'Operativo',
+'Barrio Abdon Calderon',
+0968941237);
+#----------------------------------------
+
+Insert into Administrativo(
+CargoAdministrativo) values (
+'Secretaria');
+
+Insert into Administrativo(
+CargoAdministrativo) values (
+'Gerente');
+
+#-----------------------------------------
+
+Insert into Operativo(
+CargoOperativo) values (
+'Panteon');
+
+Insert into Operativo(
+CargoOperativo) values (
+'Guardia');
+
+#-----------------------------------------
+
+Insert into Fallecimiento(
+NombresFallecido,
+ApellidosFallecido,
+CausaDeMuerte,
+FechaFallecimiento) values (
+'Jose Cevallos',
+'Mero Muentes',
+'Covid',
+'2020-02-13');
+
+Insert into Fallecimiento(
+NombresFallecido,
+ApellidosFallecido,
+CausaDeMuerte,
+FechaFallecimiento) values (
+'Maria Gabriela',
+'Pachay Cedeño',
+'Cancer',
+'2021-06-22');
+
+Insert into Fallecimiento(
+NombresFallecido,
+ApellidosFallecido,
+CausaDeMuerte,
+FechaFallecimiento) values (
+'Malany Cristina',
+'Alonzo Marquez',
+'Cancer',
+'2021-10-02');
+
+Insert into Fallecimiento(
+NombresFallecido,
+ApellidosFallecido,
+CausaDeMuerte,
+FechaFallecimiento) values (
+'Jose Manuel',
+'Lopez Moreira',
+'Cancer',
+'2020-06-22');
+
+Insert into Fallecimiento(
+NombresFallecido,
+ApellidosFallecido,
+CausaDeMuerte,
+FechaFallecimiento) values (
+'Maria Gabriela',
+'Ponce Cedeño',
+'Covid',
+'2021-01-25');
+
+Insert into Fallecimiento(
+NombresFallecido,
+ApellidosFallecido,
+CausaDeMuerte,
+FechaFallecimiento) values (
+'Cesar Alberto',
+'Pincay Mero',
+'Covid',
+'2020-08-16');
+
+Insert into Fallecimiento(
+NombresFallecido,
+ApellidosFallecido,
+CausaDeMuerte,
+FechaFallecimiento) values (
+'Bryan Alexander',
+'Alvia Carranza',
+'Trauma Encefalico',
+'2021-10-08');
+
+#-------------------------------------------
+
+Insert into Canton (
+NombreCanton,
+IdProvincia,
+IdPropietario) values (
+'Manta',
+1,
+1);
+
+Insert into Canton (
+NombreCanton,
+IdProvincia,
+IdPropietario) values (
+'Guayaquil',
+2,
+2);
+
+#---------------------------------------
+
+Insert into Cementerio(
+NombresCementerio,
+DireccionCementerio,
+IdCanton) values (
+'Los Jardines',
+'calle 9 av 33',
+1);
+
+Insert into Cementerio(
+NombresCementerio,
+DireccionCementerio,
+IdCanton) values (
+'Paz',
+'Barrio Las Cumbres',
+1);
+
+#------------------------------------------
+
+Insert into Manzana (
+NombreManzana,
+IdCementerio) values (
+'Manzana A1',
+1);
+
+Insert into Manzana (
+NombreManzana,
+IdCementerio) values (
+'Manzana B1',
+2);
+
+Insert into Manzana (
+NombreManzana,
+IdCementerio) values (
+'Manzana A2',
+1);
+
+#-------------------------------------------
+
+Insert into Boveda (
+TipoDeEstructura,
+IdManzana,
+IdPropietario) values (
+'Lapida Grabada',
+1,
+1);
+
+Insert into Boveda (
+TipoDeEstructura,
+IdManzana,
+IdPropietario) values (
+'Nicho',
+3,
+3);
+
+Insert into Boveda (
+TipoDeEstructura,
+IdManzana,
+IdPropietario) values (
+'Cruces',
+1,
+1);
+
+Insert into Boveda (
+TipoDeEstructura,
+IdManzana,
+IdPropietario) values (
+'Cruces',
+2,
+2);
+
+Insert into Boveda (
+TipoDeEstructura,
+IdManzana,
+IdPropietario) values (
+'Bovedas Individuales',
+3,
+3);
+
+Insert into Boveda (
+TipoDeEstructura,
+IdManzana,
+IdPropietario) values (
+'Bovedas Familiares',
+1,
+1);
+
+Insert into Boveda (
+TipoDeEstructura,
+IdManzana,
+IdPropietario) values (
+'Bovedas Familiares',
+2,
+2);
+
+Insert into Boveda (
+TipoDeEstructura,
+IdManzana,
+IdPropietario) values (
+'Bovedas Casas',
+3,
+3);
+
+#-----------------------------------------
+
+Insert into Tramite (
+TipoTramite,
+FechaTramite,
+IdCanton,
+IdPersonal,
+IdPersonalExterno,
+IdBoveda,
+IdPropietario) values (
+'Inhumaciones',
+'2020-02-13',
+1,
+1,
+NULL,
+1,
+1);
+
+Insert into Tramite (
+TipoTramite,
+FechaTramite,
+IdCanton,
+IdPersonal,
+IdPersonalExterno,
+IdBoveda,
+IdPropietario) values (
+'Inhumaciones',
+'2020-02-13',
+1,
+1,
+NULL,
+1,
+1);
+
+Insert into Tramite (
+TipoTramite,
+FechaTramite,
+IdCanton,
+IdPersonal,
+IdPersonalExterno,
+IdBoveda,
+IdPropietario) values (
+'Exhumaciones',
+'2021-09-25',
+1,
+2,
+1,
+2,
+2);
+
+
+Insert into Tramite (
+TipoTramite,
+FechaTramite,
+IdCanton,
+IdPersonal,
+IdPersonalExterno,
+IdBoveda,
+IdPropietario) values (
+'Inhumaciones',
+'2020-08-15',
+1,
+1,
+Null,
+1,
+1);
+
+Insert into Tramite (
+TipoTramite,
+FechaTramite,
+IdCanton,
+IdPersonal,
+IdPersonalExterno,
+IdBoveda,
+IdPropietario) values (
+'Exhumaciones',
+'2021-01-25',
+1,
+2,
+2,
+3,
+2);
+
+Insert into Tramite (
+TipoTramite,
+FechaTramite,
+IdCanton,
+IdPersonal,
+IdPersonalExterno,
+IdBoveda,
+IdPropietario) values (
+'Inhumaciones',
+'2021-04-20',
+1,
+1,
+NULL,
+1,
+1);
+
+#-------------------------------------------
+
+Insert into Pago (
+TipoPago,
+Fecha,
+ValorPago,
+IdTramite,
+IdFallecido) values (
+'Efectivo',
+'2020-02-13',
+80.50,
+1,
+1);
+
+Insert into Pago (
+TipoPago,
+Fecha,
+ValorPago,
+IdTramite,
+IdFallecido) values (
+'Tarjeta',
+'2020-05-26',
+75.25,
+1,
+1);
+
+Insert into Pago (
+TipoPago,
+Fecha,
+ValorPago,
+IdTramite,
+IdFallecido) values (
+'Tarjeta',
+'2021-09-25',
+49.99,
+2,
+2);
+
+Insert into Pago (
+TipoPago,
+Fecha,
+ValorPago,
+IdTramite,
+IdFallecido) values (
+'Efectivo',
+'2021-10-08',
+100,
+1,
+1);
+
+Insert into Pago (
+TipoPago,
+Fecha,
+ValorPago,
+IdTramite,
+IdFallecido) values (
+'Tarjeta',
+'2020-12-10',
+150.50,
+2,
+2);
+
+Insert into Pago (
+TipoPago,
+Fecha,
+ValorPago,
+IdTramite,
+IdFallecido) values (
+'Efectivo',
+'2021-11-12',
+149.99,
+1,
+1);
+
+#-------------------------------------------------
+
+Insert into Certificado(
+FechaCertificado,
+IdPago,
+IdTramite,
+IdPersonal,
+IdFallecido) values (
+'2020-06-28',
+1,
+1,
+1,
+2);
+
+Insert into Certificado(
+FechaCertificado,
+IdPago,
+IdTramite,
+IdPersonal,
+IdFallecido) values (
+'2021-10-08',
+2,
+2,
+4,
+1);
+
+Insert into Certificado(
+FechaCertificado,
+IdPago,
+IdTramite,
+IdPersonal,
+IdFallecido) values (
+'2020-12-20',
+3,
+2,
+3,
+2);
+
+Insert into Certificado(
+FechaCertificado,
+IdPago,
+IdTramite,
+IdPersonal,
+IdFallecido) values (
+'2021-01-28',
+4,
+1,
+3,
+1);
+
+Insert into Certificado(
+FechaCertificado,
+IdPago,
+IdTramite,
+IdPersonal,
+IdFallecido) values (
+'2020-01-10',
+4,
+1,
+1,
+5);
+
+Insert into Certificado(
+FechaCertificado,
+IdPago,
+IdTramite,
+IdPersonal,
+IdFallecido) values (
+'2020-01-28',
+4,
+1,
+1,
+3);
+
+Insert into Certificado(
+FechaCertificado,
+IdPago,
+IdTramite,
+IdPersonal,
+IdFallecido) values (
+'2021-06-24',
+4,
+1,
+3,
+6);
+
+
+#-------------------------------------------------
+Insert into Incidente(
+TipoIncidente,
+FechaIncidente,
+IdBoveda,
+IdCertificado) values (
+'Robo De Cadaveres',
+'2020-09-22',
+1,
+1);
+
+Insert into Incidente(
+TipoIncidente,
+FechaIncidente,
+IdBoveda,
+IdCertificado) values (
+'Invacion De Drogadictos',
+'2021-10-23',
+2,
+2);
+
+Insert into Incidente(
+TipoIncidente,
+FechaIncidente,
+IdBoveda,
+IdCertificado) values (
+'Robo De Cadaveres',
+'2020-08-10',
+1,
+1);
+
+Insert into Incidente(
+TipoIncidente,
+FechaIncidente,
+IdBoveda,
+IdCertificado) values (
+'Invacion De Drogadictos',
+'2021-02-25',
+2,
+2);
+
+Insert into Incidente(
+TipoIncidente,
+FechaIncidente,
+IdBoveda,
+IdCertificado) values (
+'Incendio',
+'2020-06-09',
+1,
+1);
+
+
+
+
+
+
+
+
+
+
+
