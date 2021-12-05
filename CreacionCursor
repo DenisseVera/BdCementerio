@@ -1,0 +1,38 @@
+DELIMITER //
+
+CREATE PROCEDURE cursor_tramite()
+BEGIN
+
+  DECLARE nombre VARCHAR(255);
+  DECLARE fecha INTEGER;
+  DECLARE total INTEGER;
+  declare valor INTEGER;
+  DECLARE var_final INTEGER DEFAULT 0;
+
+  DECLARE cursor1 CURSOR FOR select t.TipoTramite , year (t.FechaTramite) as fecha,count( t.FechaTramite) , sum( p.ValorPago) 
+from pago as p 
+inner join tramite as t on  t.IdTramite = p.IdTramite 
+group by TipoTramite ;
+
+  DECLARE CONTINUE HANDLER FOR NOT FOUND SET var_final = 1;
+
+  OPEN cursor1;
+
+  bucle: LOOP
+
+    FETCH cursor1 INTO nombre, fecha, total, valor;
+
+    IF var_final = 1 THEN
+      LEAVE bucle;
+    END IF;
+
+    select nombre as tipo_tramite, fecha as año, total as cantidad, valor as total;
+
+  END LOOP bucle;
+  CLOSE cursor1;
+
+END//
+DELIMITER ;
+
+#------------------prueba de cursor
+CALL cursor_tramite();
