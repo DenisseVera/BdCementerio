@@ -1,0 +1,13 @@
+delimiter | 
+create trigger ImpedirInhumacion
+after insert on Tramite
+for each row 
+begin 
+declare prohibir varchar(225);
+set @contador = (select count(*) from Tramite where TipoTramite='Inhumaciones' and IdPersonal=new.IdPersonal and FechaTramite=new.FechaTramite);
+if @contador >3 then 
+	set @encargado = (select NombresPersonal from Personal where IdPersonal=new.IdPersonal);
+	set prohibir = concat ('', cast(@encargado as char), ' ya tiene 3 inhumaciones');
+	signal sqlstate '45000' set message_text = prohibir;
+end if;
+end;
