@@ -1,0 +1,13 @@
+delimiter | 
+create procedure ConsultaCausaDeMuerte(in CausaDeMuerte varchar (50))
+begin 
+select
+year(Fallecimiento.FechaFallecimiento) as Año,
+Fallecimiento.CausaDeMuerte,
+count(*) as CantidadDeMuertes
+from fallecimiento
+where (Fallecimiento.CausaDeMuerte)= CausaDeMuerte 
+GROUP BY year(Fallecimiento.FechaFallecimiento)
+order by year(Fallecimiento.FechaFallecimiento);
+end;
+call ConsultaCausaDeMuerte ('Cancer')
